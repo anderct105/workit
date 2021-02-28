@@ -16,7 +16,6 @@ import android.view.WindowManager;
             this.getSupportActionBar().hide();
         }
         catch (NullPointerException e){}
-
         setContentView(R.layout.activity_main);
     }
 }
