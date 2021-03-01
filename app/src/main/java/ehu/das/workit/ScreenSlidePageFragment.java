@@ -12,23 +12,17 @@ import androidx.fragment.app.Fragment;
 
 public class ScreenSlidePageFragment extends Fragment {
 
-    private int imagen;
-    private String nombre;
+    private int fragment;
 
-    public ScreenSlidePageFragment(int image, String nombre) {
-        this.imagen = image;
-        this.nombre = nombre;
+    public ScreenSlidePageFragment(int fragment) {
+        this.fragment = fragment;
     }
 
     @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            ViewGroup rootView = (ViewGroup) inflater.inflate(
-                    R.layout.single_slide, container, false);
-            ImageView i = rootView.findViewById(R.id.imagenOpcion);
-            i.setImageResource(imagen);
-            TextView tv = rootView.findViewById(R.id.nombreOpcion);
-            tv.setText(nombre);
-            return rootView;
-        }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        ViewGroup rootView = (ViewGroup) inflater.inflate(
+                this.fragment, container, false);
+        return rootView;
+    }
 }
