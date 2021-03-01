@@ -11,18 +11,6 @@
         android:layout_height="match_parent"
         android:background="@drawable/blurry_gradient">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="102dp"
-            android:layout_height="97dp"
-            android:src="@drawable/login_user"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.255" />
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="322dp"
@@ -111,8 +99,8 @@
                 <View
                     android:id="@+id/divider"
                     android:layout_width="250dp"
-                    android:layout_height="2dp"
-                    android:background="@color/white"
+                    android:layout_height="1dp"
+                    android:background="#939292"
                     android:backgroundTint="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -127,14 +115,16 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MiTitulo"
+            android:fontFamily="cursive"
+            android:text="WorkIt"
             android:textColor="@color/white"
             android:textSize="36sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.061" />
+            app:layout_constraintVertical_bias="0.145" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

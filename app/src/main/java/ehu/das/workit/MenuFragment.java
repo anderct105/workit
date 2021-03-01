@@ -1,5 +1,6 @@
 package ehu.das.workit;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,22 +16,18 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationMenu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MenuFragment} factory method to
- * create an instance of this fragment.
- */
 public class MenuFragment extends Fragment {
 
     private static final int NUM_PAGES = 3;
     private ViewPager mPager;
-    private PagerAdapter pagerAdapter;
+    private ViewPagerAdapter pagerAdapter;
     private int[] tabs = {R.id.rutinas, R.id.entrenar, R.id.ejercicios};
 
     @Override
@@ -47,14 +44,23 @@ public class MenuFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        // Instantiate a ViewPager and a PagerAdapter.
+        ImageButton addContenido = getActivity().findViewById(R.id.añadirContenido);
+        addContenido.setColorFilter(Color.WHITE);
+        ImageButton configuracion = getActivity().findViewById(R.id.configuracion);
+        configuracion.setColorFilter(Color.WHITE);
         mPager = (ViewPager) getActivity().findViewById(R.id.viewPage);
-        pagerAdapter = new ScreenSlidePagerAdapter(getActivity().getSupportFragmentManager());
+        pagerAdapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
+        pagerAdapter.addFragment(new RutinasFragment(),"rutinas");
+        pagerAdapter.addFragment(new EntrenarFragment(),"entrenar");
+        pagerAdapter.addFragment(new EjerciciosFragment(),"ejercicios");
         mPager.setAdapter(pagerAdapter);
         mPager.setPageTransformer(true, new ZoomOutPageTransformer());
         mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            public void onPageScrollStateChanged(int state) {}
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
+            public void onPageScrollStateChanged(int state) {
+            }
+
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
 
             public void onPageSelected(int position) {
                 BottomNavigationView navegacion = getActivity().findViewById(R.id.opcionesNavigation);
@@ -74,28 +80,4 @@ public class MenuFragment extends Fragment {
         });
     }
 
-
-    /**
-     * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
-     * sequence.
-     */
-    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
-
-        private int[] fragments = {R.layout.fragment_rutinas, R.layout.fragment_entrenar, R.layout.fragment_ejercicios};
-
-        public ScreenSlidePagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return new ScreenSlidePageFragment(fragments[position]);
-        }
-
-
-        @Override
-        public int getCount() {
-            return NUM_PAGES;
-        }
-    }
 }
