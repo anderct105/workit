@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.navigation.Navigation;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
@@ -48,6 +49,10 @@ public class MenuFragment extends Fragment {
         addContenido.setColorFilter(Color.WHITE);
         ImageButton configuracion = getActivity().findViewById(R.id.configuracion);
         configuracion.setColorFilter(Color.WHITE);
+        addContenido.setOnClickListener(v -> {
+            AñadirDialog ad = new AñadirDialog(configuracion);
+            ad.show(getActivity().getSupportFragmentManager(), "añadir");
+        });
         mPager = (ViewPager) getActivity().findViewById(R.id.viewPage);
         pagerAdapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
         pagerAdapter.addFragment(new RutinasFragment(),"rutinas");

@@ -19,5 +19,22 @@
         android:id="@+id/menuFragment"
         android:name="ehu.das.workit.MenuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_addElementoFragment"
+            app:destination="@id/addElementoFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/añadirDialog"
+        android:name="ehu.das.workit.AñadirDialog"
+        android:label="AñadirDialog" />
+    <fragment
+        android:id="@+id/addElementoFragment"
+        android:name="ehu.das.workit.AddElementoFragment"
+        android:label="fragment_add_elemento"
+        tools:layout="@layout/fragment_add_elemento" >
+        <action
+            android:id="@+id/action_addElementoFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
 </navigation>

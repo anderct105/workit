@@ -31,7 +31,7 @@
                 android:elevation="50dp">
 
                 <EditText
-                    android:id="@+id/username"
+                    android:id="@+id/usuario_email"
                     android:layout_width="254dp"
                     android:layout_height="68dp"
                     android:ems="10"
@@ -47,7 +47,7 @@
                     app:layout_constraintVertical_bias="0.183" />
 
                 <EditText
-                    android:id="@+id/editTextTextPassword"
+                    android:id="@+id/contraseña"
                     android:layout_width="254dp"
                     android:layout_height="68dp"
                     android:ems="10"
