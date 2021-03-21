@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Datos personales">
+
+    </PreferenceCategory>
+    <EditTextPreference
+        android:key="edit_text_preference_1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/nombre_summary"
+        android:title="@string/nombre_pref" />
+    <EditTextPreference
+        android:key="edit_text_preference_2"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/peso_summary"
+        android:title="@string/peso" />
+    <MultiSelectListPreference
+        android:defaultValue="@array/dias"
+        android:entries="@array/dias"
+        android:entryValues="@array/dias"
+        android:key="multi_select_list_preference_1"
+        android:summary="@string/dias_entreno_summary"
+        android:title="@string/dias_entreno" />
+    <PreferenceCategory android:title="@string/aplicacion">
+
+    </PreferenceCategory>
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/idioma"
+        android:entryValues="@array/idioma"
+        android:key="list_preference_1"
+        android:summary="@string/idioma_summary"
+        android:title="@string/idioma" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="switch_preference_1"
+        android:title="@string/sesionIniciada" />
+
+    <Preference
+        android:key="return"
+        android:title="@string/volver"
+        android:summary="" />
+</PreferenceScreen>

@@ -7,6 +7,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Adaptador del view pager con la lista de fragments que aparecen
+ */
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     private final List<Fragment> mFragmentList = new ArrayList<>();
     private final List<String> mFragmentTitleList = new ArrayList<>();
@@ -26,6 +29,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     }
 
     public void addFragment(Fragment fragment, String title) {
+        // Añade el fragment a la lista
         mFragmentList.add(fragment);
         mFragmentTitleList.add(title);
     }

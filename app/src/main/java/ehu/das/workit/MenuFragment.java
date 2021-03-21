@@ -1,5 +1,7 @@
 package ehu.das.workit;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -9,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.navigation.Navigation;
+import androidx.preference.PreferenceManager;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
@@ -18,13 +21,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationMenu;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+/**
+ * Menú principal de la aplicación con un tab con 3 submenus
+ */
 
-public class MenuFragment extends Fragment {
+public class MenuFragment extends Fragment implements IOnBackPressed{
 
     private static final int NUM_PAGES = 3;
     private ViewPager mPager;
@@ -45,20 +52,44 @@ public class MenuFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        // Filtro de color para los botones
         ImageButton addContenido = getActivity().findViewById(R.id.añadirContenido);
         addContenido.setColorFilter(Color.WHITE);
         ImageButton configuracion = getActivity().findViewById(R.id.configuracion);
         configuracion.setColorFilter(Color.WHITE);
+        configuracion.setOnClickListener(v -> {
+            MainActivity.add = true;
+            Navigation.findNavController(v).navigate(R.id.action_menuFragment_to_preferencias);
+        });
+        // Abrir dialogo
         addContenido.setOnClickListener(v -> {
             AñadirDialog ad = new AñadirDialog(configuracion);
             ad.show(getActivity().getSupportFragmentManager(), "añadir");
         });
+        ImageView cerrarSesion = getActivity().findViewById(R.id.cerrarSesion);
+        cerrarSesion.setColorFilter(Color.WHITE);
+        // Cerrar sesión deshabilitar inicio de sesión por defecto
+        cerrarSesion.setOnClickListener(v -> {
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("switch_preference_1", false);
+            editor.apply();
+            editor.commit();
+            getActivity().finish();
+            Intent i = getActivity().getIntent();
+            i.putExtra("logueado", false);
+            startActivity(getActivity().getIntent());
+            /**Navigation.findNavController(getView()).navigate(R.id.action_menuFragment_to_loginFragment);
+            getActivity().recreate();**/
+        });
+        // Inicializa el page view con los tres fragments
         mPager = (ViewPager) getActivity().findViewById(R.id.viewPage);
         pagerAdapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
         pagerAdapter.addFragment(new RutinasFragment(),"rutinas");
         pagerAdapter.addFragment(new EntrenarFragment(),"entrenar");
         pagerAdapter.addFragment(new EjerciciosFragment(),"ejercicios");
         mPager.setAdapter(pagerAdapter);
+        mPager.setCurrentItem(1);
         mPager.setPageTransformer(true, new ZoomOutPageTransformer());
         mPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             public void onPageScrollStateChanged(int state) {
@@ -72,7 +103,9 @@ public class MenuFragment extends Fragment {
                 navegacion.setSelectedItemId(tabs[position]);
             }
         });
+        // Evento del nav bar para que esté sincronizada con el page view
         BottomNavigationView navigationView = getActivity().findViewById(R.id.opcionesNavigation);
+        navigationView.setSelectedItemId(R.id.entrenar);
         navigationView.setOnNavigationItemSelectedListener(item -> {
             if (item.getItemId() == tabs[0]) {
                 mPager.setCurrentItem(0);
@@ -85,4 +118,8 @@ public class MenuFragment extends Fragment {
         });
     }
 
+    @Override
+    public boolean onBackPressed() {
+        return false;
+    }
 }

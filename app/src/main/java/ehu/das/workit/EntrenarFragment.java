@@ -12,11 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link EntrenarFragment} factory method to
- * create an instance of this fragment.
+ * Este fragment es mas de relleno, ofrece la opción de en un futuro crear un cronometro y que vayan pasando los ejercicios de la rutina
  */
-public class EntrenarFragment extends Fragment {
+public class EntrenarFragment extends Fragment implements IOnBackPressed {
 
 
     @Override
@@ -34,13 +32,13 @@ public class EntrenarFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        String[] nombres = {"Pierna 1", "Pecho2"};
-        int[] imagenes = {R.drawable.punch, R.drawable.punch};
-        AdaptadorRecyclerView adaptadorRecyclerView = new AdaptadorRecyclerView(nombres, imagenes);
-        RecyclerView recyclerView = getActivity().findViewById(R.id.listaGruposEntrenar);
-        recyclerView.setAdapter(adaptadorRecyclerView);
-        GridLayoutManager elLayoutRejillaIgual= new GridLayoutManager(getActivity(),2,GridLayoutManager.VERTICAL,false);
-        recyclerView.setLayoutManager(elLayoutRejillaIgual);
 
+    }
+
+    @Override
+    public boolean onBackPressed() {
+        SalirDialog sd = new SalirDialog();
+        sd.show(getActivity().getSupportFragmentManager(), "salir");
+        return false;
     }
 }

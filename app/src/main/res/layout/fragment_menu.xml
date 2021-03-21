@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#272525">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar2"
@@ -24,24 +25,40 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
+        <ImageView
+            android:id="@+id/cerrarSesion"
+            android:layout_width="26dp"
+            android:layout_height="29dp"
+            android:src="@drawable/cerrar_sesion"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/opcionesNavigation"
             android:layout_width="match_parent"
             android:layout_height="55dp"
+            android:background="#756F6F"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
             app:menu="@menu/bottom_navigation_menu" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPage"
             android:layout_width="match_parent"
-            android:layout_height="620dp"
-            app:layout_constraintBottom_toBottomOf="@+id/opcionesNavigation"
+            android:layout_height="632dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.477">
 
         </androidx.viewpager.widget.ViewPager>
 
@@ -54,6 +71,7 @@
             android:text="WorkIt"
             android:textColor="#FFFFFF"
             android:textSize="36sp"
+            android:theme="@style/Theme.WorkIt"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
             app:layout_constraintEnd_toEndOf="@+id/toolbar2"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,10 +103,9 @@
             android:src="@drawable/plus"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
             app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-            app:layout_constraintHorizontal_bias="0.86"
+            app:layout_constraintHorizontal_bias="0.866"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

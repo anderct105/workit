@@ -6,19 +6,19 @@
         android:id="@+id/rutinas"
         android:icon="@drawable/rutinas"
         android:menuCategory="alternative"
-        android:title="Rutinas"
+        android:title="@string/Rutinas"
         android:visible="true" />
     <item
         android:id="@+id/entrenar"
         android:icon="@drawable/punch"
         android:menuCategory="secondary"
-        android:title="Entrenar"
+        android:title="@string/Entrenar"
         android:visible="true" />
     <item
         android:id="@+id/ejercicios"
         android:icon="@drawable/ejercicios"
         android:menuCategory="system"
-        android:title="Ejercicios"
+        android:title="@string/Ejercicios"
         android:visible="true" />
 
 </menu>

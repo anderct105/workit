@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="#676666">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/añadirRutinar"
         android:layout_width="140dp"
         android:layout_height="129dp"
+        android:background="#676666"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.88"
@@ -18,26 +19,24 @@
         app:layout_constraintVertical_bias="0.476">
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/imgAñadirRutina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/rutinas"
+            android:background="#676666"
             android:duplicateParentState="true"
-            />
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/rutinas" />
 
         <TextView
             android:id="@+id/etiqueta2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:duplicateParentState="true"
             android:elevation="10dp"
             android:gravity="center"
-            android:text="Rutina"
+            android:text="@string/Rutina"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:duplicateParentState="true"
-            />
+            android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -55,11 +54,10 @@
             android:id="@+id/imgAñadirEjercicio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ejercicios"
+            android:background="#676666"
             android:duplicateParentState="true"
-            />
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ejercicios" />
 
         <TextView
             android:id="@+id/etiqueta1"
@@ -67,22 +65,21 @@
             android:layout_height="match_parent"
             android:elevation="10dp"
             android:gravity="center"
-            android:text="Ejercicio"
+            android:text="@string/Ejercicio"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:duplicateParentState="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/añadirEjercicio"
         app:layout_constraintVertical_bias="0.105"
-        android:duplicateParentState="true"
 
         />
 

@@ -4,6 +4,10 @@ import android.view.View;
 
 import androidx.viewpager.widget.ViewPager;
 
+/**
+ * Esta clase ofrece el efecto al pasar de una pagina a otra del view pager
+ * https://developer.android.com/training/animation/screen-slide
+ */
 public class ZoomOutPageTransformer implements ViewPager.PageTransformer {
     private static final float MIN_SCALE = 0.85f;
     private static final float MIN_ALPHA = 0.5f;

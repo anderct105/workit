@@ -7,6 +7,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * ViewHolder con los dos elementos de cada grupo (rutina o ejercicio)
+ */
 public class GroupViewHolder extends RecyclerView.ViewHolder {
     public TextView eltexto;
     public ImageView laimagen;

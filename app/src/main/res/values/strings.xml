@@ -11,9 +11,82 @@
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="usuario_hint">usuario o email</string>
+    <string name="contrasena">contraseña</string>
+    <string name="Ejercicios">Ejercicios</string>
+    <string name="Ejercicio">Ejercicio</string>
+    <string name="Rutinas">Rutinas</string>
+    <string name="Rutina">Rutina</string>
+    <string name="Entrenar">Entrenar</string>
     <string-array name="intensidad">
         <item>Baja</item>
         <item>Media</item>
         <item>Alta</item>
     </string-array>
+    <string-array name="dias">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sábado</item>
+        <item>Domingo</item>
+    </string-array>
+    <string-array name="idioma">
+        <item>Español</item>
+        <item>Ingles</item>
+    </string-array>
+    <string name="volver">Volver</string>
+    <string name="guardar">Guardar</string>
+    <string name="add_ejercicio">Añadir ejercicio</string>
+    <string name="nombre">Nombre</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="pecho">Pecho</string>
+    <string name="espalda">Espalda</string>
+    <string name="cuadriceps">Cuádriceps</string>
+    <string name="abdominales">Abdominales</string>
+    <string name="hombros">Hombros</string>
+    <string name="gluteos">Glúteos</string>
+    <string name="biceps">Bíceps</string>
+    <string name="femoral">Femoral</string>
+    <string name="cardio">Cardio</string>
+    <string name="triceps">Triceps</string>
+    <string name="intensidad">Intensidad</string>
+    <string name="dificultad">Dificultad</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="registro">Registrarse</string>
+    <string name="hint_nombre_rutina">Nombre de la rutina</string>
+    <string name="anadir">Añadir</string>
+    <string name="repetir_contrasena">repetir contraseña</string>
+    <string name="cuenta_creada">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="usuario_registro_hint">usuario</string>
+    <string name="email">email</string>
+    <string name="registrarse">¿No tienes cuenta? Regístrate</string>
+    <string name="sesionIniciada">Mantener iniciada la sesión</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="descripcionCanal">Lista de las rutinas y ejercicios creados</string>
+    <string name="rutinaAdd">Rutina añadida</string>
+    <string name="ejercicioAdd">Ejercicio añadido</string>
+    <string name="idioma">Idioma</string>
+    <string name="idioma_summary">Selecciona el idioma de la aplicación</string>
+    <string name="aplicacion">Aplicación</string>
+    <string name="dias_entreno">¿Qúe días entrenas?</string>
+    <string name="dias_entreno_summary">Selecciona los días de la semana que vas a entrenar</string>
+    <string name="peso">¿Cúanto pesas?</string>
+    <string name="peso_summary">Introduce tu peso en kilogramos</string>
+    <string name="nombre_pref">¿Cúal es tu nombre?</string>
+    <string name="nombre_summary">Introduce tu nombre</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="salir">Salir de la aplicación</string>
+    <string name="salir_desea">¿Quieres salir de la aplicación?</string>
+    <string name="rutinaExiste">La rutina ya existe</string>
+    <string name="ejercicioExiste">El ejercicio ya existe</string>
+    <string name="nombreVacio">El nombre no puede estar vacío</string>
+    <string name="usuarioRegistrado">¡Usuario registrado!</string>
+    <string name="contraDiferente">Las contraseñas no coinciden</string>
+    <string name="usuarioOEmail">Ese usuario o email ya existe</string>
+    <string name="camposVacios">No puede haber campos vacíos</string>
+    <string name="contraCorta">La contraseña debe tener entre 6 y 20 caracteres</string>
+    <string name="emailNoValido">Introduce un email válido</string>
 </resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="usuario_hint">username or email</string>
+    <string name="contrasena">password</string>
+    <string name="Ejercicios">Exercises</string>
+    <string name="Ejercicio">Exercise</string>
+    <string name="Rutinas">Routines</string>
+    <string name="Rutina">Routine</string>
+    <string name="Entrenar">Train</string>
+    <string-array name="intensidad">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="dias">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+    <string name="volver">Return</string>
+    <string name="guardar">Save</string>
+    <string name="add_ejercicio">Add exercise</string>
+    <string name="nombre">Name</string>
+    <string name="descripcion">Description</string>
+    <string name="pecho">Chest</string>
+    <string name="espalda">Back</string>
+    <string name="cuadriceps">Quadriceps</string>
+    <string name="abdominales">Abdominals</string>
+    <string name="hombros">Shoulders</string>
+    <string name="gluteos">Gluteus</string>
+    <string name="biceps">Biceps</string>
+    <string name="femoral">Femoral</string>
+    <string name="cardio">Cardio</string>
+    <string name="triceps">Triceps</string>
+    <string name="intensidad">Intensity</string>
+    <string name="dificultad">Difficulty</string>
+    <string name="login">Login</string>
+    <string name="hint_nombre_rutina">Routine name</string>
+    <string name="anadir">Add</string>
+    <string name="repetir_contrasena">repeat password</string>
+    <string name="cuenta_creada">¿Already have an account? Login</string>
+    <string name="usuario_registro_hint">username</string>
+    <string name="email">email</string>
+    <string name="registro">SignUp</string>
+    <string name="registrarse">¿Dont have an account? SignIn</string>
+    <string name="sesionIniciada">Keep logged in</string>
+    <string name="eliminar">Delete</string>
+    <string name="descripcionCanal">List of created routines and exercises</string>
+    <string name="rutinaAdd">Routine added</string>
+    <string name="ejercicioAdd">Exercise added</string>
+    <string name="idioma">Language</string>
+    <string name="idioma_summary">Choose your language</string>
+    <string name="aplicacion">App</string>
+    <string name="dias_entreno">What days do you work out?</string>
+    <string name="dias_entreno_summary">Pick the days that you train</string>
+    <string name="peso">How much do you weigh?</string>
+    <string name="peso_summary">Enter your weigh in kilograms</string>
+    <string name="nombre_pref">What\'s your name</string>
+    <string name="nombre_summary">Enter your name</string>
+    <string name="si">Yes</string>
+    <string name="no">No</string>
+    <string name="salir">Exit app</string>
+    <string name="salir_desea">¿Do you want to close the app?</string>
+    <string name="rutinaExiste">The routine already exists</string>
+    <string name="ejercicioExiste">The exercise already exists</string>
+    <string name="nombreVacio">Name can\'t be empty</string>
+    <string name="usuarioRegistrado">User registered</string>
+    <string name="contraDiferente">Passwords don\'t match</string>
+    <string name="usuarioOEmail">The username or the email are already taken</string>
+    <string name="camposVacios">Empty fields are not allowed</string>
+    <string name="contraCorta">Password must have between 6 and 20 characters</string>
+    <string name="emailNoValido">Introduce a valid email</string>
+</resources>

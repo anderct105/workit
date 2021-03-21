@@ -13,8 +13,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="322dp"
-            android:layout_height="432dp"
+            android:layout_width="319dp"
+            android:layout_height="394dp"
             app:cardBackgroundColor="#0000"
             app:cardElevation="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -26,39 +26,40 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="434dp"
+                android:layout_height="392dp"
                 android:backgroundTint="@color/material_on_primary_disabled"
                 android:elevation="50dp">
 
                 <EditText
-                    android:id="@+id/usuario_email"
+                    android:id="@+id/usuarioRegistro"
                     android:layout_width="254dp"
                     android:layout_height="68dp"
                     android:ems="10"
-                    android:hint="Username or email"
+                    android:hint="@string/usuario_hint"
                     android:inputType="textEmailAddress"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintHorizontal_bias="0.492"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.183" />
+                    app:layout_constraintVertical_bias="0.141" />
 
                 <EditText
-                    android:id="@+id/contraseña"
+                    android:id="@+id/contraseñaRegistro"
                     android:layout_width="254dp"
                     android:layout_height="68dp"
                     android:ems="10"
-                    android:hint="Password"
+                    android:hint="@string/contrasena"
                     android:inputType="textPassword"
                     android:textColorHint="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.492"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.371" />
+                    app:layout_constraintVertical_bias="0.391" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/login"
@@ -66,33 +67,15 @@
                     android:layout_height="54dp"
                     android:background="@layout/button_style"
                     android:backgroundTintMode="multiply"
-                    android:text="LOGIN"
+                    android:text="@string/login"
                     android:textColor="@color/white"
                     app:cornerRadius="40px"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.515"
+                    app:layout_constraintHorizontal_bias="0.476"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.689"
-                    app:strokeColor="#FFFFFF"
-                    app:strokeWidth="1dp" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button7"
-                    android:layout_width="256dp"
-                    android:layout_height="54dp"
-                    android:background="@layout/button_style"
-                    android:backgroundTintMode="multiply"
-                    android:text="SIGNUP"
-                    android:textColor="@color/white"
-                    app:cornerRadius="40px"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.515"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.876"
+                    app:layout_constraintVertical_bias="0.757"
                     app:strokeColor="#FFFFFF"
                     app:strokeWidth="1dp" />
 
@@ -104,22 +87,37 @@
                     android:backgroundTint="#FFFFFF"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.521"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.532" />
+                    app:layout_constraintVertical_bias="0.572" />
+
+                <TextView
+                    android:id="@+id/registrarse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registrarse"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.906" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/title"
+            style="@android:style/Widget.Holo.Light.TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="cursive"
             android:text="WorkIt"
-            android:textColor="@color/white"
-            android:textSize="36sp"
+            android:textColor="#FFFFFF"
+            android:textSize="90sp"
             android:textStyle="bold"
+            android:theme="@style/Theme.WorkIt"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
