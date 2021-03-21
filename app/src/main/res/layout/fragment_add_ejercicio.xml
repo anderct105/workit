@@ -22,8 +22,7 @@
             android:textColorHint="#C3B5B5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.92"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addFotoEjercicio"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.185" />
 
@@ -258,8 +257,7 @@
             android:textColorHint="#C3B5B5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.92"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addFotoEjercicio"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.281" />
 
@@ -310,10 +308,10 @@
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.936"
+            app:layout_constraintHorizontal_bias="0.914"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.459" />
+            app:layout_constraintVertical_bias="0.432" />
 
         <TextView
             android:id="@+id/eliminarEjercicio"
@@ -323,8 +321,8 @@
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-            app:layout_constraintEnd_toEndOf="@+id/toolbar"
-            app:layout_constraintHorizontal_bias="0.755"
+            app:layout_constraintEnd_toStartOf="@+id/guardarRutina"
+            app:layout_constraintHorizontal_bias="0.939"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.459" />

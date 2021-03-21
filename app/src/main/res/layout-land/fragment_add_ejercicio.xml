@@ -22,8 +22,8 @@
             android:textColorHint="#DACDCD"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintStart_toEndOf="@+id/addFotoEjercicio"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.308" />
 
@@ -260,9 +260,10 @@
             android:textColorHint="#DACDCD"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.454"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintStart_toEndOf="@+id/addFotoEjercicio"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.489" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -324,11 +325,11 @@
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-            app:layout_constraintEnd_toEndOf="@+id/toolbar"
-            app:layout_constraintHorizontal_bias="0.841"
+            app:layout_constraintEnd_toStartOf="@+id/guardarRutina"
+            app:layout_constraintHorizontal_bias="0.955"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.459" />
+            app:layout_constraintVertical_bias="0.432" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
